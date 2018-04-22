@@ -38,6 +38,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:12.0.0'
     implementation 'com.google.firebase:firebase-database:12.0.0'
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    //Diatambah di tutorial 9 - server 2
+    implementation 'com.google.firebase:firebase-storage:12.0.0'
+    implementation 'com.google.firebase:firebase-auth:12.0.0'
+    implementation 'com.firebaseui:firebase-ui-database:1.2.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 }
 // Tutorial 1
 apply plugin: 'com.google.gms.google-services'
