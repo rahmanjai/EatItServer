@@ -47,6 +47,12 @@ dependencies {
 
     // Ditambah di Tutorial 13
     implementation 'com.jaredrummler:material-spinner:1.1.0'
+
+    // Tutorial 14
+    implementation 'com.google.android.gms:play-services-maps:12.0.0'
+    implementation 'com.google.android.gms:play-services:12.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
 }
 // Tutorial 1
 apply plugin: 'com.google.gms.google-services'

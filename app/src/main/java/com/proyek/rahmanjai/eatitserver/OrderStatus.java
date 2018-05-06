@@ -1,6 +1,7 @@
 package com.proyek.rahmanjai.eatitserver;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -57,7 +58,7 @@ public class OrderStatus extends AppCompatActivity {
                 requests
         ) {
             @Override
-            protected void populateViewHolder(OrderViewHolder viewHolder, Request model, int position) {
+            protected void populateViewHolder(OrderViewHolder viewHolder, final Request model, int position) {
                 viewHolder.txtOrderId.setText(adapter.getRef(position).getKey());
                 viewHolder.txtOrderStatus.setText(Common.convertCodeToStatus(model.getStatus()));
                 viewHolder.txtOrderAddres.setText(model.getAddress());
@@ -67,6 +68,9 @@ public class OrderStatus extends AppCompatActivity {
                     @Override
                     public void onClick(View view, int position, boolean isLongClik) {
                         // Diimplementasikan hanta untuk menghindari Crash
+                        Intent trackingOrder = new Intent(OrderStatus.this, TrackingOrder.class);
+                        Common.currentRequest = model;
+                        startActivity(trackingOrder);
                     }
                 });
             }
